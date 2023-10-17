@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.521920fc.css",
+    "main.js": "/static/js/main.6506d021.js",
+    "static/media/Youtube_Music_icon.png": "/static/media/Youtube_Music_icon.78a221037ca0a8178ab8.png",
+    "static/media/youtube-kids_icon.webp": "/static/media/youtube-kids_icon.9dd520de4d154b45c884.webp",
+    "index.html": "/index.html",
+    "main.521920fc.css.map": "/static/css/main.521920fc.css.map",
+    "main.6506d021.js.map": "/static/js/main.6506d021.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.521920fc.css",
+    "static/js/main.6506d021.js"
+  ]
+}
