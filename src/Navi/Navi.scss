@@ -1,0 +1,128 @@
+$mainBack : #0f0f0f;
+$mainWhite : #fffff1;
+$mainGray : #282828;
+
+.NaviMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $mainBack;
+    padding: 10px 20px;
+    color: $mainWhite;
+
+    width: 236px;
+    height: 880px;
+    transition: overflow 0.3s;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 7px;
+        background-color: $mainBack;
+    }
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: black;
+    // }
+    &:hover {
+        &::-webkit-scrollbar-thumb{
+            min-height: 500px;
+            border-radius: 20px;
+            background-color: gray;
+          }
+    }
+  
+    & > div {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px groove $mainGray;
+      padding: 12px;
+
+      div {
+        margin-left: 18px;
+        font-size: 16px;
+        padding : 12px 0px;
+      }
+  
+      button {
+        background: transparent;
+        border: none;
+       
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        display: flex;
+        width: 204px;
+        height: 40px;
+        margin-left: 13.5px;
+        align-items: center;
+        border-radius: 10px;
+
+        div {
+            font-weight: 200;
+            font-size: 14px;
+            margin-left: 26px;
+        }
+  
+        &:hover {
+         background-color:$mainGray;
+         opacity: 0.9;
+        }
+      }
+    }
+
+    a {
+        color: $mainWhite;
+        font-size: 12px;
+    }
+  
+    .active {
+      button {
+        color: #FF0000;
+      }
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+    .topdiv {
+        padding-top: 0;
+      }
+
+    .linkcon {
+        padding: 12px 12px 0px 7px;
+        border: none;
+        div {
+            margin-left: 0px;
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 600;
+            color: #717171;
+           
+            div{
+                display: flex;
+                flex-direction: column;
+                padding: 0px 0px 12px 0px;
+            }
+        }
+        a {
+            color: #AAAAAA;
+            font-size: 13px;
+            margin: 1px 3px 1px 0px;
+        }
+        p{
+            display: inline;
+            color: #3EA6FF;
+        }
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    .home {
+      background-color:$mainGray;
+      opacity: 0.9;
+    }
+  }
+  

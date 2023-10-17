@@ -1,0 +1,32 @@
+$mainBack : #0f0f0f;
+$mainWhite : #fffff1;
+$mainGray : #282828;
+
+
+.ContentsContain {
+    width: 100%;
+    height: 820px;
+    background-color: $mainBack;
+    padding-top: 24px;
+
+
+    .videoWrap {
+        height: 820px;  
+        padding-left: 7px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow:scroll;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color:$mainBack;
+        }
+        &::-webkit-scrollbar-thumb {
+            width: 6px;
+            background-color: gray;
+            border-radius: 20px;
+        }
+    }
+
+}

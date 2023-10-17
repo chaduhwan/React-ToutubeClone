@@ -1,0 +1,86 @@
+$mainBack : #0f0f0f;
+$mainWhite : #fffff1;
+$mainGray : #282828;
+
+
+.videocomponentCon {
+    display: flex;
+    background-color: $mainBack;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 16px;
+    width: 390px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+
+    .introCon {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        height: 100px;
+        
+        &:hover {
+            .icon {
+                display: flex;
+            }
+        }
+          div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 12px;
+            img {
+              width: 36px;
+              height: 36px;
+              border-radius: 36px;
+
+              margin-right: 12px
+            }
+            h3 {
+              font-size: 16px;
+              color: #f1f1f1;
+              margin: 0;
+              font-weight: 500;
+            }
+            div {
+              width: 320px;
+              height: 20px;
+              display: flex;
+              flex-direction: column;
+              font-size: 14px;
+              line-height: 16px;
+              font-weight: 600;
+              color: #AAAAAA;
+              margin-top: 5px;
+             
+              align-items: baseline;
+            }
+            span {
+                font-size: 13px;
+                line-height: 16px;
+                font-weight: 600;
+                color: #AAAAAA;
+            }
+          }
+          button {
+            margin-top: 12px;
+            background-color: $mainBack;
+            width: 17px;
+            border: none;
+            color: $mainWhite;
+            cursor: pointer;
+            font-size: 20px;
+          }
+          .icon {
+            display: none;
+          }
+    }
+  }
+  
+  .player-wrapper {
+    border-radius: 15px;
+  }
+  .react-player__play-icon{
+    display: none;
+  }
+  
