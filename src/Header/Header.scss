@@ -46,7 +46,7 @@ $mainGray : #282828;
       @media screen and (max-width : 974px) {
         &{
           display: flex;
-          justify-content: end;
+          justify-content: flex-end;
             width: 100%;
             min-width: 250px;   
       }
