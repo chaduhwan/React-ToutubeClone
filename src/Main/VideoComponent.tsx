@@ -34,12 +34,13 @@ export default function VideoComponent() {
     const [hoverStates, setHoverStates] = useState<boolean[]>([]);
     const types = useSelector((state) => state);
 
-    const youtubeApi = axios.create({
-        baseURL: "https://youtube.googleapis.com/youtube/v3",
-        params: { key: process.env.REACT_APP_SECRET_KEY },
-    });
-
+    
     useEffect(() => {
+        const youtubeApi = axios.create({
+            baseURL: "https://youtube.googleapis.com/youtube/v3",
+            params: { key: process.env.REACT_APP_SECRET_KEY },
+        });
+        
         const recommendVideos = async () => {
             try {
                 const response = await youtubeApi.get("videos", {
@@ -56,7 +57,6 @@ export default function VideoComponent() {
                 const channelInfoList: string[] = videoList.map((video : any) => {
                     return video.snippet.channelId;
                 });
-                
                 const loadChannelInfo = async (channelInfoList: string[]) => {
                     const profiles = await Promise.all(channelInfoList.map(async (channelId) => {
                         const channelRes = await youtubeApi.get("channels", {
@@ -69,7 +69,7 @@ export default function VideoComponent() {
                     }));
                     setProfile(profiles);
                 }
-    
+        
                 setVideo(videoList);
                 loadChannelInfo(channelInfoList);
                 setHoverStates(new Array(videoList.length).fill(true))
@@ -79,7 +79,7 @@ export default function VideoComponent() {
             }
         };
         recommendVideos();
-    }, [youtubeApi,types])
+    }, [types])
     
 
     const handleMouseOver = (index: number) => {
