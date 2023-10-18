@@ -8,6 +8,11 @@ $mainGray : #282828;
     height: 820px;
     background-color: $mainBack;
     padding-top: 24px;
+    @media screen and (max-width : 974px) {
+        &{
+            padding-top: 9px;
+        }
+    }
 
 
     .videoWrap {

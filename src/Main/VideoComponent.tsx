@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react';
 import './VideoComponent.scss';
 import { IconProp, config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisVertical} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactPlayer from 'react-player';
 import axios from 'axios';
@@ -48,7 +48,7 @@ export default function VideoComponent() {
                         part: "snippet, statistics",
                         chart: "mostPopular",
                         regionCode: "KR",
-                        maxResults: 10,
+                        maxResults: 12,
                         videoCategoryId: types,
                     },
                 });

@@ -16,7 +16,7 @@ export default function Header() {
 
             <div>
                 <button><FontAwesomeIcon className='icon' icon={faBars as IconProp}/></button>
-                <img src={logo} alt='logo'/>
+                <img onClick={()=>{window.location.reload()}}src={logo} alt='logo'/>
             </div>
 
             <div>

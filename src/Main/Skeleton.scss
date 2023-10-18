@@ -2,11 +2,16 @@
     background: #f1f1f1;
     border-radius: 4px;
     opacity: 0.2;
+    display: flex;
+    overflow: hidden;
     
     &.video {
         width: 390px;
         height: 210px;
         border-radius: 15px;
+        & > div {
+            border-radius: 15px;
+        }
     }
     
     &.title {
@@ -29,6 +34,9 @@
         width: 36px;
         height: 36px;
         border-radius: 50%;
+        & > div {
+            border-radius: 100%;
+        }
     }
 }
 

@@ -14,14 +14,15 @@ export default function Navi() {
 
     return (
         <div className='NaviMain'>
-            <div className='topdiv'>
-                <button className='home'><FontAwesomeIcon className='icon' icon={faHouse as IconProp}/><div>홈</div></button>
-                <button><FontAwesomeIcon className='icon'icon={faFilm as IconProp}/><div>Shorts</div></button>
-                <button><FontAwesomeIcon className='icon'icon={faHouse as IconProp}/><div>구독</div></button>
+            
+            <div className='topdiv responsive'>
+                <button className='home responsive'><FontAwesomeIcon className='icon' icon={faHouse as IconProp}/><div>홈</div></button>
+                <button className='responsive'><FontAwesomeIcon className='icon'icon={faFilm as IconProp}/><div>Shorts</div></button>
+                <button className='responsive'> <FontAwesomeIcon className='icon'icon={faHouse as IconProp}/><div>구독</div></button>
             </div>
 
-            <div>
-                <button><FontAwesomeIcon className='icon'icon={faFolderPlus as IconProp}/><div>보관함</div></button>
+            <div className='responsive folder'>
+                <button className='responsive folder'><FontAwesomeIcon className='icon'icon={faFolderPlus as IconProp}/><div>보관함</div></button>
                 <button><FontAwesomeIcon className='icon'icon={faClockRotateLeft as IconProp}/><div>시청기록</div></button>
                 <button><FontAwesomeIcon className='icon'icon={faClock as IconProp}/><div>나중에 볼 동영상</div></button>
                 <button><FontAwesomeIcon className='icon'icon={faThumbsUp as IconProp}/><div>좋아요 표시한 동영상</div></button>

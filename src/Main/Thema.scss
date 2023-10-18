@@ -4,18 +4,24 @@ $mainGray : #282828;
 
 .ThemaCon {
     display: flex;
-    height: 56px;
-    width: -webkit-fill-available;
-    background-color:$mainBack;
+    min-height: 56px; /* 변경: min-height를 사용하여 최소 높이 설정 */
+    width: 100%; /* 변경: 너비를 100%로 설정 */
+    background-color: $mainBack;
     color: $mainWhite;
     align-items: center;
     padding: 0px 24px;
     font-size: 14px;
     font-weight: 400 ;
+    overflow-y: hidden;
+    overflow-x: auto; /* 추가: 가로 스크롤 활성화 */
+    white-space: nowrap; /* 추가: 텍스트 강제로 가로 방향으로 표시 */
+
+    &::-webkit-scrollbar {
+       background-color: $mainBack;
+    }
 
     div {
-        display: flex;
-        width: auto;
+        display: inline-flex; /* 변경: display 속성을 inline-flex로 변경 */
         align-items: center;
         height: 32px;
         color: #f1f1f1;
@@ -23,10 +29,10 @@ $mainGray : #282828;
         border-radius: 8px;
         margin: 12px 12px 12px 0px;
         padding: 0px 12px;
-        cursor: pointer;;
-        transition: background-color 0.3s; /* 원래 배경색에서 밝아지는 효과를 주기 위한 트랜지션 */
+        cursor: pointer;
+        transition: background-color 0.3s;
         &:hover {
-            background-color: lighten($mainGray, 10%); /* hover 시 배경색이 10% 밝아짐 */
+            background-color: lighten($mainGray, 10%);
             opacity: 0.9;
         }
     }
