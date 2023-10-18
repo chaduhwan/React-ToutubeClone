@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import './VideoComponent.scss';
 import { IconProp, config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -47,11 +47,11 @@ export default function VideoComponent() {
                         part: "snippet, statistics",
                         chart: "mostPopular",
                         regionCode: "KR",
-                        maxResults: 20,
+                        maxResults: 10,
                         videoCategoryId: types,
                     },
                 });
-
+    
                 const videoList = response.data.items;
                 const channelInfoList: string[] = videoList.map((video : any) => {
                     return video.snippet.channelId;
@@ -69,17 +69,18 @@ export default function VideoComponent() {
                     }));
                     setProfile(profiles);
                 }
-
+    
                 setVideo(videoList);
                 loadChannelInfo(channelInfoList);
-                setHoverStates(new Array(videoList.length).fill(true)); // 모든 비디오에 초기 hover 상태를 설정합니다
+                setHoverStates(new Array(videoList.length).fill(true))
                 setLoad(true);
             } catch (error) {
                 console.log(error);
             }
         };
         recommendVideos();
-    }, [types]);
+    }, [youtubeApi,types])
+    
 
     const handleMouseOver = (index: number) => {
         const updatedHoverStates = [...hoverStates];

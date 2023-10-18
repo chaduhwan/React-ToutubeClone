@@ -2,7 +2,7 @@ import logo from './logo_dark.png'
 import './Header.scss'
 import { IconProp, config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import { faBars, faBell, faCircleUser, faMicrophone, faSearch, faUser, faVideo } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBell, faCircleUser, faMicrophone, faSearch, faVideo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 config.autoAddCss = false
 
