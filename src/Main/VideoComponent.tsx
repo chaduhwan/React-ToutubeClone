@@ -43,6 +43,7 @@ export default function VideoComponent() {
         
         const recommendVideos = async () => {
             try {
+                setLoad(false);
                 const response = await youtubeApi.get("videos", {
                     params: {
                         part: "snippet, statistics",
